@@ -1,29 +1,49 @@
 <html>
-<head> <link rel="stylesheet" type="text/css" href="home.css"></head>
-<body>
+<head> <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script><link rel="stylesheet" type="text/css" href="home.css"></head>
+<body><script src="pizza.js"></script>
 <center>	<h1 class="p">ONLINE FOOD ORDER</h1>
 
-	<div class="navbar">
-		<nav>
-			<a href="pizza.html" id="menu" >pizza </a>
-			<a href="sandwich.html" id="menu"> sandwich</a>
-			<a href="dosa.html" id="menu"> dosa</a>
-			<a href="chinese.html" id="menu"> chinese</a>
-			<a href="dessert.html" id="menu"> dessert</a>
-			
-
-			<a href="index.html">Logout</a>
-			
-			<a href="questionlist.html">cart</a>
-		</nav>
-	</div>
+	<nav class="navbar bg-primary my">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="now"><a href="home.html" >Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="pizza.html">Pizza</a></li>
+          <li><a href="sandwich.html">sandwich</a></li>
+          <li><a href="dosa.html">dosa</a></li>
+			<li><a href="chinese.html">chinese</a></li>
+			<li class="nowdish"><a href="dessert.html">dessert</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="index.html"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
 	<div class="outer">
 		<div class=inner>
 			<img src="chocolate.jpg"/>
 			<p class="name">chocolate icecream </p>
-			<p class="price">price:400/-</p>
+			<p id="price">60</p>
+			<button id="chocolate" onclick="select(event)">buy</button>
 		</div>
+	</div>
 	
+
+	<div class=bill>
+	<br><br>
+		your selection from this:
+		<p id="selection"></p>
+	
+	</div>
 </center>
 </body>
 
