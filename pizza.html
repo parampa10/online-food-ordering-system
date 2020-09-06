@@ -1,63 +1,97 @@
 <html>
-<head> <link rel="stylesheet" type="text/css" href="home.css"></head>
+<head> 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="home.css">
+	
+</head>
 <body>
+	<script src="pizza.js"></script>
 <center>	<h1 class="p">ONLINE FOOD ORDER</h1>
 
-	<div class="navbar">
-		<nav>
-			<a href="pizza.html" id="menu" >pizza </a>
-			<a href="sandwich.html" id="menu"> sandwich</a>
-			<a href="dosa.html" id="menu"> dosa</a>
-			<a href="chinese.html" id="menu"> chinese</a>
-			<a href="dessert.html" id="menu"> dessert</a>
-			
+	<nav class="navbar bg-primary my">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li ><a href="home.html" >Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li class="nowdish"><a href="pizza.html">Pizza</a></li>
+          <li><a href="sandwich.html">sandwich</a></li>
+          <li><a href="dosa.html">dosa</a></li>
+			<li><a href="chinese.html">chinese</a></li>
+			<li><a href="dessert.html">dessert</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="index.html"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
+	
 
-			<a href="index.html">Logout</a>
-			
-			<a href="questionlist.html">cart</a>
-		</nav>
-	</div>
 	<div class="outer">
 		<div class=inner>
 			<img src="pizza.jpg"/>
 			<p class="dish">margerita pizza</p>
-			<p class="price"> price:300/-</p>
+			<p class="margerita">300</p>
+			<button id="margerita" onclick="select(event)">buy</button>
 		</div>
 	</div>
 	<div class="outer">
 		<div class=inner>
 			<img src="vegpizza.jpg"/>
 			<p class="dish">veg pizza</p>
-			<p class="price"> price:400/-</p>
+			<p class="veg">400</p>
+			<button id="veg" onclick="select(event)">buy</button>
 		</div>
 	</div>
 	<div class="outer">	
 		<div class=inner>
 			<img src="pannerpizza.jpg"/>
 			<p class="dish">panner pizza</p>
-			<p class="price"> price:435/-</p>
+			<p class="panner">435</p>
+			<button id="panner" onclick="select(event)">buy</button>
 		</div>
 	</div>
 	<div class="outer">	
 		<div class=inner>
 			<img src="cheesy7pizza.jpg"/>
 			<p class="dish">cheesy 7 pizza</p>
-			<p class="price"> price:450/-</p>
+			<p id="cheesy7">450</p>
+			<button id="cheesy7" onclick="select(event)">buy</button>
 		</div>
 	</div>
 	<div class="outer">	
 		<div class=inner>
 			<img src="tandooripizza.jpg"/>
 			<p class="dish"> tandoori pizza</p>
-			<p class="price"> price:400/-</p>
+			<p class="tandoori">400</p>
+			<button id="tandoori" onclick="select(event)">buy</button>
 		</div>
 	</div>
 	<div class="outer">	
 		<div class=inner>
 			<img src="cornpizza.jpg"/>
 			<p class="dish"> corn pizza</p>
-			<p class="price"> price:420/-</p>
+			<p class="cornpizza" type="int">420</p>
+			<button id="cornpizza" onclick="select(event)">buy</button>
 		</div>
+	</div>
+
+	
+
+	
+	<div class=bill>
+	<br><br>
+		your selection from this:
+		<p id="selection"></p>
+		
 	</div>
 </center>
 </body>
