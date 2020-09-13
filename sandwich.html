@@ -11,8 +11,8 @@
 	<nav class="navbar bg-primary my">
   <div class="container-fluid">
     <ul class="nav navbar-nav">
-      <li class="now"><a href="home.html" >Home</a></li>
-      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu <span class="caret"></span></a>
+      <li ><a href="home.html" >Home</a></li>
+      <li class="dropdown now"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Menu <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="pizza.html">Pizza</a></li>
           <li class="nowdish"><a href="sandwich.html">sandwich</a></li>
@@ -23,7 +23,7 @@
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span> cart</a></li>
       <li><a href="index.html"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
     </ul>
   </div>
@@ -32,7 +32,7 @@
 		<div class=inner>
 			<img src="sandwich.jpg"/>
 			<p id="price" type="int">250</p>
-			<button id="sandwich" onclick="select(event)">buy</button>
+			<button id="sandwich" onclick="select(event)" class="btn-success">buy</button>
 		</div>
 	</div>
 	
