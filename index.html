@@ -1,93 +1,40 @@
-<!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
- <link rel="stylesheet" type="text/css" href="index.css">
-
+	<link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-<center>
-<h1>ONLINE FOOD ORDER</h1>
-
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Signup</button>
-</center>
-
-<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="home.html" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="icon3.PNG" alt="Avatar" class="avatar">
+	<p class="p">ONLINE FOOD ORDER</p>
+	<h2>log in here</h2>
+	
+	<form action="home.html"><div>
+		<font>USERNAME: </font><input type="text" name="user" class="input">
+		<br>
+		<font>PASSWORD:</font> <input type="password" name="password" class="input"><br>
+		<br>
+		<input type="submit" value="login" name="submit" class="button1">
+		<!--<div class="input-group">
+      <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>   
     </div>
+    <div class="input-group">
+      <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+    </div>-->
+	</form>
+	<form action="signup.html">
+		<input type="submit" value="new user" name="new user" class="button1">
+	</form>
 
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+	<form action="passwordreset.html">
+		<input type="submit" value="forgot password" name="forgotpassword" class="button">
+	</form>
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-        
-      <a href="home.html"><button type="submit">Login</button></a>
-       <a href="signup.html"><button type="submit">sign up</button></a>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
+	<form action="adminlogin.html">
+		<input type="submit" value="admin login" name="adminlogin" class="button">
+	</div>
+	</form>
 
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw"><a href="passwordreset.html">Forgot password?</a></span>
-    </div>
-  </form>
-</div>
-<!-------------------------------------------------------------------------------------------->
-
-<div id="id02" class="modal">
-  
-  <form class="modal-content animate" action="home.html" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="icon3.PNG" alt="Avatar" class="avatar">
-    </div>
-
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-
-      <label for="repsw"><b>RE-Password</b></label>
-      <input type="password" placeholder="Enter Password again" name="repsw" required>
-
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" required>
-        
-       <a href="home.html"><button type="submit">sign up</button></a>
-    
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
-      
-    </div>
-  </form>
-</div>
-<script>
-// Get the modal
-var modal1 = document.getElementById('id01');
-var modal2 = document.getElementById('id02');
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal1) {
-        modal1.style.display = "none";
-    }
-    if (event.target == modal2) {
-        modal2.style.display = "none";
-    }
-}
-</script>
-
+	
 </body>
+
 </html>
