@@ -1,38 +1,87 @@
 <html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="index.css">
+	<script>
+    $(document).ready(function(){
+        $("#button1").click(function(){
+            // show hide paragraph on button click
+                // check paragraph once toggle effect is completed
+                if(!($("#id01").is(":visible"))){
+					$("#id01").show();
+					$("#id1h2").show();
+                } else{
+                    $("#id01").hide();
+					$("#id1h2").hide();
+                }
+           
+        });
+    });
+	$(document).ready(function(){
+        $("#button2").click(function(){
+            // show hide paragraph on button click
+                // check paragraph once toggle effect is completed
+                if(!($("#id02").is(":visible"))){
+					$("#id02").show();
+					$("#id2h2").show();
+                } else{
+                    $("#id02").hide();
+					$("#id2h2").hide();
+                }
+           
+        });
+    });
+</script>
+
 </head>
 <body>
 	<p class="p">ONLINE FOOD ORDER</p>
-	<h2>log in here</h2>
+	<center>
+		<button id="button1" style="align:center;" class="btn-success">Login</button> <button id="button2" class="btn-success">Sign up</button>
+	</center>
+	<h2 id="id1h2"hidden>log in here</h2>
+	<div id="id01" hidden>
+	<form action="home.html">
 	
-	<form action="home.html"><div>
 		<font>USERNAME: </font><input type="text" name="user" class="input">
 		<br>
 		<font>PASSWORD:</font> <input type="password" name="password" class="input"><br>
 		<br>
-		<input type="submit" value="login" name="submit" class="button1">
-		<!--<div class="input-group">
-      <input id="email" type="text" class="form-control" name="email" placeholder="Email">
-      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>   
-    </div>
-    <div class="input-group">
-      <input id="password" type="password" class="form-control" name="password" placeholder="Password">
-      <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-    </div>-->
-	</form>
-	<form action="signup.html">
-		<input type="submit" value="new user" name="new user" class="button1">
+		<input type="submit" value="login" name="submit" class="button">
+	
 	</form>
 
-	<form action="passwordreset.html">
+	<form class="log" action="passwordreset.html">
 		<input type="submit" value="forgot password" name="forgotpassword" class="button">
 	</form>
 
 	<form action="adminlogin.html">
 		<input type="submit" value="admin login" name="adminlogin" class="button">
-	</div>
-	</form>
+	
+	</form></div>
+	<h2 id="id2h2" hidden>signup Here</h2>
+	<div class="signup" id="id02" hidden>
+	<form action="home.html" name="form1">
+	
+	
+		
+		<font>USERNAME:</font><input id="username" type="text" name="user"/ class="input"><br>
+		<br>
+		<font>PASSWORD:</font><input id="password" type="password" name="password"/ class="input"><br>
+		<br>
+		<font>RE-PASSWORD</font><input id="repassword" type="password"  name="repassword" class="input" ><br><br>
+
+		<font>EMAIL ID:</font><input type="text" name="email" class="input" onclick="signup()" ><br><br>
+		<input type="submit" value="sign up" name="submit" class="button" >
+	
+	</form></div>
+	
 
 	
 </body>
