@@ -58,8 +58,8 @@ p.round{
 }
 
 div{
-	height: 150px;
-	width : 400px;
+	height: 340px;
+	width : 450px;
 	border: 5px solid #4B4A4A;
 	border-radius: 20px;
 	margin: 5px 590px 30px;
@@ -77,7 +77,7 @@ div{
 	background-color: #D5A789; 
 	margin-right: auto;
 	margin-left: auto;
-	height: 280px;
+	height: 350px;
 	width : 430px;
 }
 
